@@ -59,3 +59,14 @@ class SemanticRanking(BaseModel):
     model_id: str
     config: dict
     matches: list[SemanticMatch]
+
+
+class ExperienceResult(BaseModel):
+    """Job-relevant experience, computed from dated positions in experience sections."""
+    relevant_years: float         # in positions that mention the job's skills or role
+    total_years: float            # all dated positions, overlaps counted once
+    required_years: float | None  # None = the job states no requirement
+    score: float | None           # 0..1, None = not applicable (no requirement)
+    positions_dated: int
+    positions_relevant: int
+    explanation: str
