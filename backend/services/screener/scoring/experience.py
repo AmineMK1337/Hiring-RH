@@ -53,7 +53,8 @@ MAX_REQUIRED_YEARS = 50
 # ---------------------------------------------------------------- required years
 # All patterns run on folded text (lowercase, no accents, ASCII digits).
 
-_NUM = r"(?<![\d.,])\d{1,2}(?:[.,]\d)?"
+# Not part of a longer number or a decimal ("12.5"), but "cloud.10+ years" is fine
+_NUM = r"(?<!\d)(?<!\d[.,])\d{1,2}(?:[.,]\d)?"
 _UNIT = r"(?:years?|yrs?|ans|annees?|سنوات|سنين|سنة|سنه|اعوام|عاما|عام)"
 _AR_UNIT = r"(?:سنوات|سنين|سنة|سنه|اعوام|عاما|عام)"
 _AR_NUMBER_WORDS = {
@@ -196,8 +197,10 @@ def _point(prefix: str) -> str:
     )
 
 
+# A numeric end date may be glued to the next word ("08/2016Apex", common in
+# text extracted from PDF/HTML); a "present" word must end at a word boundary.
 _DATE_RANGE = re.compile(
-    rf"{_point('start')}{_SEPARATOR}(?:{_point('end')}|(?P<present>{_PRESENT}))(?!\w)"
+    rf"{_point('start')}{_SEPARATOR}(?:{_point('end')}|(?P<present>{_PRESENT})(?!\w))"
 )
 _OPEN_RANGE = re.compile(rf"(?<!\w){_SINCE}{_point('start')}")
 
@@ -248,7 +251,7 @@ def extract_intervals(text: str, *, as_of: date) -> list[tuple[int, int]]:
         if start is None or end is None:
             continue
         end = min(end, today)
-        if start // 12 < MIN_START_YEAR or start > today or start > end:
+        if (start - 1) // 12 < MIN_START_YEAR or start > today or start > end:
             continue
         intervals.append((start, end))
     return intervals

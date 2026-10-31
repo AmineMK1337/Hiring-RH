@@ -35,6 +35,7 @@ def experience(*texts: str, required: float | None = 3.0):
     ("2-4 years of experience", 2),
     ("2 to 4 years", 2),
     ("5 years of experience, including 2 years with Kubernetes", 5),
+    ("Experienced in Salesforce cloud.10+ years in SFDC", 10),   # no space after the period
 ])
 def test_required_years_english(text, expected):
     assert parse_required_years(text) == expected
@@ -114,6 +115,7 @@ def test_open_range_since():
 @pytest.mark.parametrize("text", [
     "2022 - 2020",                     # start after end
     "1940 - 1945",                     # before 1950
+    "Dec 1949 - Jan 1951",             # December is stored as year * 12 + 12
     "Jan 2027 - Present",              # starts in the future
     "13/2021 - 05/2022",               # no month 13
 ])
@@ -123,6 +125,12 @@ def test_impossible_dates_rejected(text):
 
 def test_future_end_is_cut_at_as_of():
     assert months("Jan 2026 - Dec 2028") == 11
+
+
+def test_end_date_glued_to_next_word():
+    # Common in text extracted from PDF/HTML resumes
+    assert months("Engineer,07/2015 to 08/2016Apex Systems") == 14
+    assert months("2019 - presentation skills") == 0
 
 
 def test_overlapping_jobs_counted_once():
