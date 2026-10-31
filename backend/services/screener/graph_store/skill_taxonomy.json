@@ -1,1 +1,802 @@
-[]
+{
+  "_meta": {
+    "description": "Screener skill taxonomy: canonical skills, aliases, category, related skills (curated by hand).",
+    "generated_by": "scripts/seed_taxonomy.py",
+    "source": "https://github.com/arpitpandey454507/NLP-Powered-Resume-Job-Matching-Candidate-Ranking-System",
+    "source_file": "src/utils/keyword_mapping.py (SKILL_GROUPS, SKILL_CATEGORIES)",
+    "source_commit": "538d812874d006ecc668de4737239d82d6b3e966",
+    "license": "MIT",
+    "copyright": "Copyright (c) 2024 AI Resume Screener",
+    "license_notice": "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+    "local_additions": [
+      "ab_testing",
+      "automated_testing",
+      "excel",
+      "go",
+      "power_bi",
+      "pytest",
+      "tableau"
+    ],
+    "changes": "Filtered to software/data/DevOps/frontend skills, short and ambiguous aliases removed, aliases lowercased, French spellings added, categories remapped."
+  },
+  "skills": [
+    {
+      "name": "ab_testing",
+      "aliases": [
+        "a/b testing",
+        "ab testing",
+        "a/b test",
+        "a/b tests",
+        "tests a/b"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "accessibility",
+      "aliases": [
+        "accessibility",
+        "web accessibility",
+        "accessible design",
+        "accessibilité"
+      ],
+      "category": "frontend",
+      "related": []
+    },
+    {
+      "name": "agile",
+      "aliases": [
+        "agile",
+        "méthode agile",
+        "méthodes agiles",
+        "méthodologie agile"
+      ],
+      "category": "methodology",
+      "related": []
+    },
+    {
+      "name": "angular",
+      "aliases": [
+        "angular",
+        "angular.js",
+        "angularjs"
+      ],
+      "category": "frontend",
+      "related": []
+    },
+    {
+      "name": "artificial_intelligence",
+      "aliases": [
+        "artificial intelligence",
+        "artificial-intelligence",
+        "intelligence artificielle"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "automated_testing",
+      "aliases": [
+        "automated tests",
+        "automated testing",
+        "unit tests",
+        "unit testing",
+        "integration tests",
+        "integration testing",
+        "tests unitaires",
+        "tests d'intégration",
+        "tests automatisés"
+      ],
+      "category": "testing",
+      "related": []
+    },
+    {
+      "name": "aws",
+      "aliases": [
+        "aws",
+        "amazon web services"
+      ],
+      "category": "cloud",
+      "related": []
+    },
+    {
+      "name": "azure",
+      "aliases": [
+        "azure",
+        "microsoft azure"
+      ],
+      "category": "cloud",
+      "related": []
+    },
+    {
+      "name": "bitbucket",
+      "aliases": [
+        "bitbucket"
+      ],
+      "category": "tools",
+      "related": []
+    },
+    {
+      "name": "c#",
+      "aliases": [
+        "c#",
+        "c sharp",
+        "csharp"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "c++",
+      "aliases": [
+        "c++",
+        "cpp"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "cassandra",
+      "aliases": [
+        "cassandra"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "ci_cd",
+      "aliases": [
+        "ci/cd",
+        "ci cd",
+        "continuous integration",
+        "continuous delivery",
+        "continuous deployment",
+        "intégration continue",
+        "déploiement continu",
+        "livraison continue"
+      ],
+      "category": "devops",
+      "related": []
+    },
+    {
+      "name": "cloudwatch",
+      "aliases": [
+        "cloudwatch",
+        "aws cloudwatch"
+      ],
+      "category": "cloud",
+      "related": []
+    },
+    {
+      "name": "computer_vision",
+      "aliases": [
+        "computer vision",
+        "vision par ordinateur"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "css3",
+      "aliases": [
+        "css3",
+        "css",
+        "cascading style sheets"
+      ],
+      "category": "frontend",
+      "related": []
+    },
+    {
+      "name": "data_analysis",
+      "aliases": [
+        "data analysis",
+        "data analytics",
+        "analyse de données",
+        "analyse des données"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "data_science",
+      "aliases": [
+        "data science",
+        "data-science",
+        "science des données"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "deep_learning",
+      "aliases": [
+        "deep learning",
+        "deep-learning",
+        "apprentissage profond"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "django",
+      "aliases": [
+        "django"
+      ],
+      "category": "backend",
+      "related": []
+    },
+    {
+      "name": "docker",
+      "aliases": [
+        "docker",
+        "dockerfile",
+        "containerization",
+        "containerisation",
+        "conteneurisation"
+      ],
+      "category": "devops",
+      "related": []
+    },
+    {
+      "name": "ec2",
+      "aliases": [
+        "ec2",
+        "amazon ec2"
+      ],
+      "category": "cloud",
+      "related": []
+    },
+    {
+      "name": "elasticsearch",
+      "aliases": [
+        "elasticsearch",
+        "elastic search"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "excel",
+      "aliases": [
+        "excel",
+        "microsoft excel"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "express",
+      "aliases": [
+        "express.js",
+        "expressjs"
+      ],
+      "category": "backend",
+      "related": []
+    },
+    {
+      "name": "fastapi",
+      "aliases": [
+        "fastapi",
+        "fast api"
+      ],
+      "category": "backend",
+      "related": []
+    },
+    {
+      "name": "flask",
+      "aliases": [
+        "flask"
+      ],
+      "category": "backend",
+      "related": []
+    },
+    {
+      "name": "gcp",
+      "aliases": [
+        "gcp",
+        "google cloud",
+        "google cloud platform"
+      ],
+      "category": "cloud",
+      "related": []
+    },
+    {
+      "name": "git",
+      "aliases": [
+        "git"
+      ],
+      "category": "tools",
+      "related": []
+    },
+    {
+      "name": "github",
+      "aliases": [
+        "github",
+        "git hub"
+      ],
+      "category": "tools",
+      "related": []
+    },
+    {
+      "name": "gitlab",
+      "aliases": [
+        "gitlab",
+        "git lab"
+      ],
+      "category": "tools",
+      "related": []
+    },
+    {
+      "name": "go",
+      "aliases": [
+        "golang",
+        "go language",
+        "langage go"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "graphql",
+      "aliases": [
+        "graphql",
+        "graph ql"
+      ],
+      "category": "backend",
+      "related": []
+    },
+    {
+      "name": "hadoop",
+      "aliases": [
+        "hadoop",
+        "apache hadoop"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "helm",
+      "aliases": [
+        "helm chart",
+        "helm charts"
+      ],
+      "category": "devops",
+      "related": []
+    },
+    {
+      "name": "html5",
+      "aliases": [
+        "html5",
+        "html"
+      ],
+      "category": "frontend",
+      "related": []
+    },
+    {
+      "name": "huggingface",
+      "aliases": [
+        "hugging face",
+        "huggingface"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "java",
+      "aliases": [
+        "java"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "javascript",
+      "aliases": [
+        "javascript"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "jenkins",
+      "aliases": [
+        "jenkins"
+      ],
+      "category": "devops",
+      "related": []
+    },
+    {
+      "name": "jira",
+      "aliases": [
+        "jira"
+      ],
+      "category": "methodology",
+      "related": []
+    },
+    {
+      "name": "kanban",
+      "aliases": [
+        "kanban"
+      ],
+      "category": "methodology",
+      "related": []
+    },
+    {
+      "name": "keras",
+      "aliases": [
+        "keras"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "kubernetes",
+      "aliases": [
+        "kubernetes",
+        "k8s"
+      ],
+      "category": "devops",
+      "related": []
+    },
+    {
+      "name": "lambda",
+      "aliases": [
+        "aws lambda"
+      ],
+      "category": "cloud",
+      "related": []
+    },
+    {
+      "name": "langchain",
+      "aliases": [
+        "langchain"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "linux",
+      "aliases": [
+        "linux",
+        "linux operating system"
+      ],
+      "category": "devops",
+      "related": []
+    },
+    {
+      "name": "llm",
+      "aliases": [
+        "llm",
+        "large language model",
+        "large language models"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "machine_learning",
+      "aliases": [
+        "machine learning",
+        "machine-learning",
+        "apprentissage automatique"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "mongodb",
+      "aliases": [
+        "mongodb",
+        "mongo db",
+        "mongo"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "mysql",
+      "aliases": [
+        "mysql"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "nextjs",
+      "aliases": [
+        "next.js",
+        "nextjs",
+        "next js"
+      ],
+      "category": "frontend",
+      "related": []
+    },
+    {
+      "name": "nlp",
+      "aliases": [
+        "nlp",
+        "natural language processing",
+        "natural-language processing",
+        "traitement du langage naturel",
+        "traitement automatique du langage naturel",
+        "traitement automatique des langues"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "nodejs",
+      "aliases": [
+        "node.js",
+        "nodejs",
+        "node js"
+      ],
+      "category": "backend",
+      "related": []
+    },
+    {
+      "name": "nosql",
+      "aliases": [
+        "nosql",
+        "no sql",
+        "non relational database",
+        "base de données non relationnelle",
+        "bases de données non relationnelles"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "numpy",
+      "aliases": [
+        "numpy",
+        "num py"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "opencv",
+      "aliases": [
+        "opencv",
+        "open cv"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "oracle",
+      "aliases": [
+        "oracle database",
+        "oracle db"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "pandas",
+      "aliases": [
+        "pandas"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "postgresql",
+      "aliases": [
+        "postgresql",
+        "postgres",
+        "postgre sql"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "power_bi",
+      "aliases": [
+        "power bi",
+        "powerbi"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "pytest",
+      "aliases": [
+        "pytest"
+      ],
+      "category": "testing",
+      "related": []
+    },
+    {
+      "name": "python",
+      "aliases": [
+        "python",
+        "python3",
+        "python 3"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "pytorch",
+      "aliases": [
+        "pytorch",
+        "py torch"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "r",
+      "aliases": [
+        "r programming",
+        "r language"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "rag",
+      "aliases": [
+        "retrieval augmented generation",
+        "retrieval-augmented generation"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "react",
+      "aliases": [
+        "react",
+        "react.js",
+        "reactjs"
+      ],
+      "category": "frontend",
+      "related": []
+    },
+    {
+      "name": "redis",
+      "aliases": [
+        "redis"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "responsive_design",
+      "aliases": [
+        "responsive design",
+        "responsive web design",
+        "design responsive"
+      ],
+      "category": "frontend",
+      "related": []
+    },
+    {
+      "name": "rest_api",
+      "aliases": [
+        "rest api",
+        "restful api",
+        "restful apis",
+        "rest apis",
+        "api rest",
+        "apis rest",
+        "api restful",
+        "apis restful"
+      ],
+      "category": "backend",
+      "related": []
+    },
+    {
+      "name": "s3",
+      "aliases": [
+        "amazon s3",
+        "aws s3"
+      ],
+      "category": "cloud",
+      "related": []
+    },
+    {
+      "name": "scikit_learn",
+      "aliases": [
+        "scikit-learn",
+        "scikit learn",
+        "sklearn",
+        "scikit_learn"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "scipy",
+      "aliases": [
+        "scipy"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "scrum",
+      "aliases": [
+        "scrum"
+      ],
+      "category": "methodology",
+      "related": []
+    },
+    {
+      "name": "spark",
+      "aliases": [
+        "apache spark",
+        "pyspark",
+        "py spark"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "sql",
+      "aliases": [
+        "sql",
+        "structured query language"
+      ],
+      "category": "database",
+      "related": []
+    },
+    {
+      "name": "statistics",
+      "aliases": [
+        "statistics",
+        "statistical analysis",
+        "statistiques",
+        "analyse statistique"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "tableau",
+      "aliases": [
+        "tableau",
+        "tableau software",
+        "tableau desktop"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "tensorflow",
+      "aliases": [
+        "tensorflow",
+        "tensor flow"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "transformers",
+      "aliases": [
+        "hugging face transformers"
+      ],
+      "category": "data",
+      "related": []
+    },
+    {
+      "name": "typescript",
+      "aliases": [
+        "typescript"
+      ],
+      "category": "language",
+      "related": []
+    },
+    {
+      "name": "vue",
+      "aliases": [
+        "vue.js",
+        "vuejs"
+      ],
+      "category": "frontend",
+      "related": []
+    }
+  ]
+}
