@@ -1,0 +1,1 @@
+// Component: Generic content card

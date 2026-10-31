@@ -1,0 +1,25 @@
+[
+  {
+    "job_id": "job-backend-python",
+    "title": "Backend Python Developer",
+    "requirements": [
+      {"text": "Build and maintain REST APIs in Python", "kind": "required"},
+      {"text": "Experience with relational databases such as PostgreSQL", "kind": "required"},
+      {"text": "Containerize applications with Docker", "kind": "required"},
+      {"text": "Deploy services on Kubernetes or a cloud platform", "kind": "preferred"},
+      {"text": "Write automated unit and integration tests", "kind": "preferred"},
+      {"text": "Collaborate with frontend developers on API design", "kind": "responsibility"}
+    ]
+  },
+  {
+    "job_id": "job-data-analyst",
+    "title": "Data Analyst",
+    "requirements": [
+      {"text": "Query and analyze data with SQL", "kind": "required"},
+      {"text": "Build dashboards and reports with Power BI or Tableau", "kind": "required"},
+      {"text": "Clean and analyze datasets with Python and pandas", "kind": "required"},
+      {"text": "Basic statistics and A/B testing", "kind": "preferred"},
+      {"text": "Present insights to non-technical stakeholders", "kind": "responsibility"}
+    ]
+  }
+]

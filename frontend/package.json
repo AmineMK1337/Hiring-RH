@@ -1,0 +1,10 @@
+{
+  "name": "hirewall-frontend",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "echo \"dev placeholder\"",
+    "build": "echo \"build placeholder\"",
+    "preview": "echo \"preview placeholder\""
+  }
+}

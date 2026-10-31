@@ -1,0 +1,34 @@
+[
+  {"candidate_id": "cand-001", "sections": [
+    {"kind": "summary", "text": "Backend engineer with 5 years of experience building web services."},
+    {"kind": "experience", "text": "- Built REST APIs in Python using FastAPI and Django.\n- Designed PostgreSQL schemas and optimized slow queries.\n- Packaged services with Docker and deployed them on Kubernetes.\n- Wrote unit and integration tests with pytest."},
+    {"kind": "skills", "text": "Python, FastAPI, Django, PostgreSQL, Docker, Kubernetes, pytest"}]},
+  {"candidate_id": "cand-002", "sections": [
+    {"kind": "summary", "text": "Développeuse backend avec 3 ans d'expérience."},
+    {"kind": "experience", "text": "- Développement d'API REST en Python avec Flask.\n- Gestion de bases de données MySQL.\n- Conteneurisation des applications avec Docker."},
+    {"kind": "skills", "text": "Python, Flask, MySQL, Docker, Git"}]},
+  {"candidate_id": "cand-003", "sections": [
+    {"kind": "summary", "text": "Software engineer focused on server-side systems."},
+    {"kind": "experience", "text": "- Designed and shipped backend services exposing HTTP endpoints for a mobile app.\n- Modeled data in a relational store and tuned indexes.\n- Containerised deployments and ran them on a managed cloud cluster."},
+    {"kind": "skills", "text": "Go, Linux, CI pipelines"}]},
+  {"candidate_id": "cand-004", "sections": [
+    {"kind": "summary", "text": "Data analyst turning raw data into business decisions."},
+    {"kind": "experience", "text": "- Wrote SQL queries to analyze sales data.\n- Built Power BI dashboards for the sales team.\n- Cleaned datasets with Python and pandas.\n- Presented monthly insights to managers."},
+    {"kind": "skills", "text": "SQL, Power BI, Python, pandas, Excel"}]},
+  {"candidate_id": "cand-005", "sections": [
+    {"kind": "summary", "text": "Frontend developer building user interfaces."},
+    {"kind": "experience", "text": "- Built React single-page applications.\n- Worked with backend developers to integrate REST APIs.\n- Improved accessibility and performance."},
+    {"kind": "skills", "text": "JavaScript, React, CSS, TypeScript"}]},
+  {"candidate_id": "cand-006", "sections": [
+    {"kind": "summary", "text": "Marketing specialist."},
+    {"kind": "experience", "text": "- Managed social media campaigns.\n- Organized events and wrote newsletters."},
+    {"kind": "skills", "text": "Communication, Canva, SEO"}]},
+  {"candidate_id": "cand-007", "sections": [
+    {"kind": "summary", "text": "Recent graduate in computer science."},
+    {"kind": "project", "text": "- University project: a small REST API in Python with SQLite.\n- Created a Tableau dashboard for a statistics course."},
+    {"kind": "skills", "text": "Python, SQL, Tableau, statistics"}]},
+  {"candidate_id": "cand-008", "sections": [
+    {"kind": "summary", "text": "Customer support agent."},
+    {"kind": "experience", "text": "- Handled customer requests in a call center."},
+    {"kind": "skills", "text": "Python REST API Docker PostgreSQL Kubernetes pytest\nPython REST API Docker PostgreSQL Kubernetes pytest\nPython REST API Docker PostgreSQL Kubernetes pytest"}]}
+]

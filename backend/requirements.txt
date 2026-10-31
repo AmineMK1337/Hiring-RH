@@ -1,0 +1,9 @@
+# Core
+pydantic>=2.6
+numpy>=1.26
+
+# Screener: local multilingual embeddings
+sentence-transformers>=3.0
+
+# Tests
+pytest>=8.0

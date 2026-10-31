@@ -1,0 +1,13 @@
+# Continuous integration workflow (placeholder)
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "CI placeholder"

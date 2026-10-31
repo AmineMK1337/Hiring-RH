@@ -1,0 +1,7 @@
+/docs/ @owner
+/data/ @owner
+/backend/ @owner
+/frontend/ @owner
+/scripts/ @owner
+/deploy/ @owner
+/.github/ @owner

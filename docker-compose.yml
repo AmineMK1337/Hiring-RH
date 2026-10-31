@@ -1,0 +1,8 @@
+# Local development stack for Hirewall (placeholders only)
+services: {}
+  # backend:
+  #   build: ./backend
+  # frontend:
+  #   build: ./frontend
+  # neo4j:
+  #   image: neo4j
