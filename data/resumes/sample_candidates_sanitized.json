@@ -30,5 +30,17 @@
   {"candidate_id": "cand-008", "sections": [
     {"kind": "summary", "text": "Customer support agent."},
     {"kind": "experience", "text": "- Handled customer requests in a call center."},
-    {"kind": "skills", "text": "Python REST API Docker PostgreSQL Kubernetes pytest\nPython REST API Docker PostgreSQL Kubernetes pytest\nPython REST API Docker PostgreSQL Kubernetes pytest"}]}
+    {"kind": "skills", "text": "Python REST API Docker PostgreSQL Kubernetes pytest\nPython REST API Docker PostgreSQL Kubernetes pytest\nPython REST API Docker PostgreSQL Kubernetes pytest"}]},
+  {"candidate_id": "cand-009", "sections": [
+    {"kind": "summary", "text": "Développeuse backend, reconversion depuis l'administration."},
+    {"kind": "experience", "text": "Développeuse backend — Société Alpha (fictive) | mars 2022 - aujourd'hui\n- Développement d'API REST en Python avec FastAPI.\n- Conteneurisation des services avec Docker.\n\nAssistante administrative — Société Beta (fictive) | sept. 2017 - févr. 2022\n- Accueil téléphonique et gestion du courrier."},
+    {"kind": "skills", "text": "Python, FastAPI, Docker, PostgreSQL"}]},
+  {"candidate_id": "cand-010", "sections": [
+    {"kind": "summary", "text": "مطورة برمجيات."},
+    {"kind": "experience", "text": "مطورة Python — شركة خيالية أ | من جانفي 2021 إلى حاليا\n- تطوير واجهات REST API باستعمال Python و Django.\n\nمطورة بدوام جزئي — شركة خيالية ب | من أفريل 2022 إلى جوان 2023\n- صيانة قواعد بيانات PostgreSQL وكتابة اختبارات pytest."},
+    {"kind": "skills", "text": "Python, Django, PostgreSQL, Docker, pytest"}]},
+  {"candidate_id": "cand-011", "sections": [
+    {"kind": "summary", "text": "Customer service agent moving into software development."},
+    {"kind": "experience", "text": "Customer service agent — Fictional Call Center | 2004 - 2024\n- Answered customer calls and handled complaints.\n- Trained new agents on the ticketing tool."},
+    {"kind": "skills", "text": "Python, REST APIs, Docker, PostgreSQL"}]}
 ]

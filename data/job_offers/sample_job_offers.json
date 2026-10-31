@@ -21,5 +21,16 @@
       {"text": "Basic statistics and A/B testing", "kind": "preferred"},
       {"text": "Present insights to non-technical stakeholders", "kind": "responsibility"}
     ]
+  },
+  {
+    "job_id": "job-backend-python-3y",
+    "title": "Backend Python Developer (mid-level)",
+    "requirements": [
+      {"text": "Minimum 3 ans d'expérience en développement d'API REST en Python", "kind": "required"},
+      {"text": "Experience with relational databases such as PostgreSQL", "kind": "required"},
+      {"text": "Containerize applications with Docker", "kind": "required"},
+      {"text": "Write automated unit and integration tests", "kind": "preferred"},
+      {"text": "Collaborate with frontend developers on API design", "kind": "responsibility"}
+    ]
   }
 ]
