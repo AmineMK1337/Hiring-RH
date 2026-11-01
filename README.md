@@ -45,6 +45,64 @@ ollama pull qwen2.5:3b          # if you use Ollama
 python -m streamlit run app.py  # http://localhost:8501
 ```
 
+## Talent Orbit web app
+
+A second interface on the same pipeline: a FastAPI backend (`api/`) and a 3D
+web page (`frontend/`) where the job offer is the sun and every candidate is a
+planet whose distance from it is `100 − fit score`. Closer means a better fit.
+
+**Start it (Windows):** double-click `run.bat`, or:
+
+```powershell
+.\venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+python -m uvicorn api.main:app --port 8000   # then open http://localhost:8000
+```
+
+macOS / Linux: `./run.sh`.
+
+It uses the same `.env` as the Streamlit app (`LLM_PROVIDER`, `OLLAMA_MODEL`,
+`GROQ_API_KEY`). MongoDB is used when it is running on `localhost:27017`;
+otherwise data is kept in `data/orbit_store.json`, so the app works without it.
+`LLM_PROVIDER=demo` runs without any LLM (rule-based scores, clearly labeled):
+use it to rehearse, never to hire.
+
+**Demo flow**
+
+1. **Load demo candidates** (13 fictional profiles, two contain injected
+   instructions), or drop PDF/DOCX resumes. `demo_data/cvs/` has sample
+   PDFs, including `attack_hidden_text.pdf` with an instruction written in
+   invisible white text.
+2. **Describe the job** (or start from a preset) and press **Score
+   candidates**. All candidates wait as grey moons on the outer edge, then
+   glide inward one by one as the LLM scores them.
+3. **Click a planet** for the LLM's justification, the three sub-scores and
+   the extracted profile. Shortlist or reject: only your click records a
+   decision, with an audit entry.
+
+**How it maps to the pipeline**
+
+| Step | Code |
+|---|---|
+| Resume → structured profile | `api/pipeline.py: extract_profile` (same `ResumeData` schema, `with_schema` and retries as `app.py`; the prompt marks the resume as untrusted data) |
+| Profile → justification and sub-scores | `utils.justify_candidate` (unchanged) |
+| Ranking | fit score, then number of skills (same as `utils.rank_candidates`) |
+| Orbit distance | `100 − fit_score`; orbital plane = profile family (display only) |
+
+**Security**
+
+- Uploads: PDF/DOCX only, 5 MB max, real file signature checked.
+- Prompt injection: lines that instruct the AI (English, French, Arabic) and
+  invisible characters are detected *before* the LLM reads the resume. The
+  lines are removed, the candidate is flagged (red crystal in the orbit) and
+  the recruiter sees the exact text. Structured fields are checked again
+  before scoring.
+- Blind review is on by default: names are hidden until the recruiter reveals them.
+- The LLM never decides. Decisions are stored only on a recruiter's click.
+
+**Tests:** `pip install pytest httpx` then `python -m pytest -q` (demo mode,
+no LLM or MongoDB needed).
+
 ## Evaluation
 
 `eval_dataset.py` runs the full pipeline on the labeled dataset

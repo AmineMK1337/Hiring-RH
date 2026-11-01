@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hiring-RH · Talent Orbit</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪐</text></svg>">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+    "three": "./vendor/three.module.js",
+    "three/examples/jsm/": "./vendor/jsm/"
+} }
+</script>
+</head>
+<body>
+<div class="app">
+  <aside class="left">
+    <h1 class="brand">Hiring-RH</h1>
+    <p class="sub">The agent extracts, scores and explains. You decide.</p>
+    <div class="llm" id="llm">Connecting…</div>
+
+    <section>
+      <h2><span class="step">1</span>Candidates <span class="count" id="count">0</span></h2>
+      <label class="drop" id="drop">
+        <input type="file" id="files" accept=".pdf,.docx" multiple hidden>
+        <strong>Drop resumes here</strong><span>or click to choose PDF / DOCX files (5 MB max)</span>
+      </label>
+      <div class="row">
+        <button class="btn" id="demoBtn" type="button">Load demo candidates</button>
+        <button class="btn ghost" id="clearBtn" type="button">Clear all</button>
+      </div>
+      <div class="progress" id="upProgress" hidden><i></i><span></span></div>
+      <ul class="log" id="upLog"></ul>
+    </section>
+
+    <section>
+      <h2><span class="step">2</span>Job offer</h2>
+      <label class="f" for="preset">Start from</label>
+      <select id="preset"></select>
+      <label class="f" for="title">Job title</label>
+      <input id="title" required maxlength="200">
+      <label class="f" for="skills">Required skills (comma-separated)</label>
+      <input id="skills" maxlength="1000">
+      <div class="two">
+        <div><label class="f" for="minexp">Min. years</label><input id="minexp" type="number" min="0" max="50" value="0"></div>
+        <div><label class="f" for="topn">Shortlist size</label><input id="topn" type="number" min="1" max="100" value="5"></div>
+      </div>
+      <label class="f" for="criteria">Additional criteria</label>
+      <input id="criteria" maxlength="2000">
+      <label class="f" for="desc">Full job description (optional, improves scoring)</label>
+      <textarea id="desc" rows="4" maxlength="20000"></textarea>
+      <button class="btn primary wide" id="scoreBtn" type="button">Score candidates</button>
+      <div class="progress" id="matchProgress" hidden><i></i><span></span></div>
+      <ul class="log" id="matchLog"></ul>
+    </section>
+  </aside>
+
+  <main class="center">
+    <div class="head">
+      <div>
+        <h2 id="jobTitle">Talent Orbit</h2>
+        <p class="muted" id="headNote">Load candidates, describe the job, then score. Grey moons are waiting to be scored.</p>
+      </div>
+      <div class="stats">
+        <div><strong id="sTotal">0</strong>candidates</div>
+        <div><strong id="sScored">0</strong>scored</div>
+        <div><strong id="sStrong">0</strong>fit ≥ 75</div>
+        <div><strong id="sFlag">0</strong>flagged</div>
+      </div>
+    </div>
+    <div id="orbit" class="orbit" role="img" aria-label="Candidates orbiting the job offer; closer means a higher fit score"></div>
+    <div class="bar">
+      <div class="legend" id="legend"></div>
+      <div class="row">
+        <label class="toggle"><input type="checkbox" id="blind" checked> Blind review (hide names)</label>
+        <button class="btn" id="pauseBtn" type="button">Pause orbits</button>
+      </div>
+    </div>
+
+    <h3>Ranking</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>#</th><th>Candidate</th><th>Profile</th><th>Fit</th><th>Skills</th><th>Experience</th><th>Field</th><th>Status</th></tr></thead>
+        <tbody id="rows"><tr><td colspan="8" class="muted">No scores yet.</td></tr></tbody>
+      </table>
+    </div>
+  </main>
+
+  <aside class="right" id="detail" aria-live="polite">
+    <p class="muted">Click a planet or a row to see the LLM’s justification.</p>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

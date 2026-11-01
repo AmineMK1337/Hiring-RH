@@ -11,3 +11,6 @@ venv/
 # Uploaded resumes and the downloaded evaluation dataset, caches and logs
 resumes/
 data/
+
+# Tests
+.pytest_cache/
