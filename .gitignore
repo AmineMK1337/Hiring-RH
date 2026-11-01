@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Secrets: never commit real keys, only .env.example
+.env
+.env.*
+!.env.example
+
+# Uploaded resumes and the downloaded evaluation dataset, caches and logs
+resumes/
+data/
